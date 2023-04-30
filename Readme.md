@@ -1,19 +1,6 @@
 # dotfiles
 This is a collection of my personal dot files as well as a script to backup and restore!
 
-# Included dotfiles:
- - https://github.com/be5invis/Iosevka
-   - Fonts used system wide
-   - Extracted to /usr/local/share/fonts/
-
- - https://github.com/starship/starship
-   - Terminal 
-   - ~/.config/starship.toml:./files/.config/starship.toml
-
-
- - Bashrc
-   - ~/.bashrc:./files/.bashrc
-
 # Usage:
 The 'map.txt' file should contain a line separated list of files.
 Each line should contain the original file and the backup file.
