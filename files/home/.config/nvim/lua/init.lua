@@ -74,7 +74,7 @@ cmp.setup({
     })
   })
 
-  -- LSP Servers
+-- lsp servers
   local capabilities = require('cmp_nvim_lsp').default_capabilities()
   -- Replace <YOUR_LSP_SERVER> with ea/ch lsp server you've enabled.
     lspconfig.pylsp.setup {
@@ -86,9 +86,20 @@ cmp.setup({
   }
 
   lspconfig.asm_lsp.setup {
-      capabilities = capabilities
+      cmd = {"asm-lsp"},
+      filetypes = {"asm", "nasm", "vmasm"},
+      --capabilities = default_capabilities
   }
+  
+  local win = require('lspconfig.ui.windows')
+  local _default_opts = win.default_opts
 
+  win.default_opts = function(options)
+      local opts = _default_opts(options)
+      opts.border = 'single'
+      return opts
+  end
+-- treesitter
   require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
   ensure_installed = { "c", "lua", "vim", "vimdoc", "query" },
@@ -101,7 +112,7 @@ cmp.setup({
   auto_install = true,
 
   -- List of parsers to ignore installing (for "all")
-  ignore_install = { "javascript" },
+  ignore_install = { },
 
   ---- If you need to change the installation directory of the parsers (see -> Advanced Setup)
   -- parser_install_dir = "/some/path/to/store/parsers", -- Remember to run vim.opt.runtimepath:append("/some/path/to/store/parsers")!
@@ -131,6 +142,7 @@ cmp.setup({
   },
 }
 
+-- theme
 require("catppuccin").setup({
     flavour = "mocha", -- latte, frappe, macchiato, mocha
     background = { -- :h background
@@ -187,8 +199,14 @@ vim.cmd.set "tabstop=4"
 vim.cmd.set "shiftwidth=4"
 vim.cmd.set "expandtab"
 
--- Converted keymaps
+-- vim lsp
 
+vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
+vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+
+-- Converted keymaps
 vim.api.nvim_set_keymap("n", "<F2>", "<Cmd>NERDTreeToggle<CR>", { noremap = true })
 
 vim.api.nvim_set_keymap("n", "<A-<>", "<Cmd>BufferMovePrevious<CR>", { noremap = true })
