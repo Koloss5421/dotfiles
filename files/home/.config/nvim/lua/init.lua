@@ -90,6 +90,8 @@ cmp.setup({
       filetypes = {"asm", "nasm", "vmasm"},
       --capabilities = default_capabilities
   }
+  lspconfig.tsserver.setup{}
+
   
   local win = require('lspconfig.ui.windows')
   local _default_opts = win.default_opts

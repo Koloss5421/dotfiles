@@ -1,4 +1,4 @@
-format = '($username )$symbol$git_branch$directory $character '
+format = '($python )($username )$symbol$git_branch$directory $character '
 
 add_newline = false
 
@@ -15,5 +15,7 @@ style_user = 'bold green'
 format = '[\[$user\]]($style)'
 show_always = false
 
-[custom.user]
-when = '''whoami | grep root'''
+[python]
+symbol = '🐍'
+format = '[(\($symbol$virtualenv\))]($style)'
+python_binary = ['./venv/bin/python', 'python', 'python3', 'python2']
