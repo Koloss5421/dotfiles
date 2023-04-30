@@ -1,0 +1,6 @@
+~/.bashrc:./files/.bashrc
+~/.config/starship.toml:./files/home/.config/starship.toml
+~/.config/nvim/init.vim:./files/home/.config/nvim/init.vim
+~/.config/nvim/lua/init.lua:./files/home/.config/nvim/lua/init.lua
+~/.ssh/config:./files/home/.ssh/config
+/usr/local/share/fonts/Iosevka_Term_Extended_Nerd_Font.ttf:./files/usr/local/share/fonts/Iosevka_Term_Extended_Nerd_Font.ttf:0

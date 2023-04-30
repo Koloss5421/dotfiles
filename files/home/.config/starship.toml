@@ -1,0 +1,19 @@
+format = '($username )$symbol$git_branch$directory $character '
+
+add_newline = false
+
+[directory]
+style = 'bold green'
+truncate_to_repo = false
+
+[git_branch]
+format = '[\[$symbol$branch(:$remote_branch)\]]($style) '
+
+[username]
+style_root = 'bold red'
+style_user = 'bold green'
+format = '[\[$user\]]($style)'
+show_always = false
+
+[custom.user]
+when = '''whoami | grep root'''
