@@ -4,4 +4,4 @@
 ~/.config/nvim/lua/init.lua:./files/home/.config/nvim/lua/init.lua
 ~/.ssh/config:./files/home/.ssh/config
 /usr/local/share/fonts/Iosevka_Term_Extended_Nerd_Font.ttf:./files/usr/local/share/fonts/Iosevka_Term_Extended_Nerd_Font.ttf:0
-/usr/local/share/fonts/Roboto-Regular.ttf:./files/usr/local/share/fonts/Roboto-Regular.ttf
+/usr/local/share/fonts/Roboto-Regular.ttf:./files/usr/local/share/fonts/Roboto-Regular.ttf:0
