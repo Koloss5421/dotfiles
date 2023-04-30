@@ -138,7 +138,7 @@ reset_smartcard () {
     echo "[+] Resetting Ssh-Agent..."
     ssh-add -D
     echo "[+] Adding pkcs to agent..."
-    success="$(ssh-add -s /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so 2>&1)"
+    success="$(ssh-add -s /usr/lib/x86_64-linux-gnu/opensc-pkcs11.so 2>&1)"
     error=$(echo "$success" | grep "Could not add card")
     if [[ ! -z "$error" ]]; then
         echo "[!] Killing ssh-agent..."
@@ -147,7 +147,7 @@ reset_smartcard () {
         echo "[+] Starting SSH Agent..."
         eval `ssh-agent -s`
         echo "[+] Adding pkcs to agent..."
-        ssh-add -s /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so
+        ssh-add -s /usr/lib/x86_64-linux-gnu/opensc-pkcs11.so
     fi
 }
 
