@@ -195,6 +195,7 @@ require("catppuccin").setup({
 })
 -- setup must be called before loading
 vim.cmd.colorscheme "catppuccin-mocha"
+vim.cmd.set "relativenumber"
 vim.cmd.set "number"
 vim.cmd.set "cursorline"
 vim.cmd.set "tabstop=4"
