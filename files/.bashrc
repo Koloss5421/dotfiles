@@ -91,7 +91,8 @@ reset_smartcard () {
 
 ## Paths
 export PATH=$PATH:/home/koloss/.local/bin
-. "$HOME/.cargo/env"
+export GOPATH=/opt/programs/go
+#. "$HOME/.cargo/env"
 
 ## Alias
 alias rsc=reset_smartcard
