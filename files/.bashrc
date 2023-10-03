@@ -14,11 +14,14 @@ esac
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=5000
+HISTFILESIZE=20000
 # append to the history file, don't overwrite it
 shopt -s histappend
-
+# Lets append the history on every command
+PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
+# Include timestamp in history
+export HISTTIMEFORMAT='%F %T '
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
@@ -79,14 +82,20 @@ reset_smartcard () {
     success="$(ssh-add -s /usr/lib/x86_64-linux-gnu/opensc-pkcs11.so 2>&1)"
     error=$(echo "$success" | grep "Could not add card")
     if [[ ! -z "$error" ]]; then
-        echo "[!] Killing ssh-agent..."
-        export SSH_AGENT_PID=$(pidof ssh-agent)
-        eval `ssh-agent -k`
+        echo "[!] Killing ssh-agents..."
+        for x in $(pidof ssh-agent); do
+            export SSH_AGENT_PID=$x
+            eval `ssh-agent -k`
+        done;
         echo "[+] Starting SSH Agent..."
         eval `ssh-agent -s`
         echo "[+] Adding pkcs to agent..."
         ssh-add -s /usr/lib/x86_64-linux-gnu/opensc-pkcs11.so
     fi
+}
+
+reset_xfce_cursor() {
+    xfconf-query --channel xsettings --property /Gtk/CursorThemeSize --set 16
 }
 
 ## Paths
