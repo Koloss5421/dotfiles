@@ -94,22 +94,41 @@ reset_smartcard () {
     fi
 }
 
-reset_xfce_cursor() {
+pysource () {
+	source /opt/projects/hacking/venv/bin/activate
+}
+
+reset_xfce_cursor () {
     xfconf-query --channel xsettings --property /Gtk/CursorThemeSize --set 16
+}
+
+update-discord () {
+    installed_version=$(dpkg -l discord | grep amd64 | sed -E "s/\s{2,}/,/g" | cut -d ',' -f 3)
+    live_version=$(curl "https://discord.com/api/download?platform=linux&format=deb" -si | grep "location:" | rev | cut -d '/' -f 2 | rev)
+    if [[ "$installed_version" != "$live_version" ]]; then
+        echo "[+] Updating Discord from $installed_version -> $live_version..."
+        curl -L "https://discord.com/api/download?platform=linux&format=deb" --output /tmp/discord_update.deb
+        sudo dpkg -i /tmp/discord_update.deb
+    else
+        echo "[*] Discord is already at $installed_version (live: $live_version)."
+    fi
 }
 
 ## Paths
 export PATH=$PATH:/home/koloss/.local/bin
 export GOPATH=/opt/programs/go
-#. "$HOME/.cargo/env"
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_DATA_HOME=$HOME/.local/share
+export XDG_STATE_HOME=$HOME/.local/state
+export PYTHON_HISTORY=$XDG_STATE_HOME/python/history
+#source "$HOME/.cargo/env"
 
 ## Alias
 alias rsc=reset_smartcard
 alias vim=nvim
-
+alias ll="ls -lha"
 ## Bind/Set
-#bind 'set show-all-if-ambiguous on'
-#bind 'TAB:menu-complete'
-#bind '"\e[Z":menu-complete-backward'
+
 ## Exec Starship
 eval "$(starship init bash)"

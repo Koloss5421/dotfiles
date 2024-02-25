@@ -3,7 +3,7 @@ call plug#begin('~/.vim/plugged')
 " FileManager
 Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
+Plug 'nvim-telescope/telescope.nvim'
 
 "Tabs
 Plug 'nvim-tree/nvim-web-devicons'
