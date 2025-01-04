@@ -124,10 +124,16 @@ export XDG_STATE_HOME=$HOME/.local/state
 export PYTHON_HISTORY=$XDG_STATE_HOME/python/history
 #source "$HOME/.cargo/env"
 
+## Less Options for highlighting requires 'source-highlight' package
+export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
+export LESS=' -R '
+
 ## Alias
 alias rsc=reset_smartcard
 alias vim=nvim
 alias ll="ls -lha"
+alias fzf="fzf -e --preview='less {}'"
+alias calc="bc -li"
 ## Bind/Set
 
 ## Exec Starship
