@@ -3,6 +3,13 @@
 ~/.config/nvim/init.vim:./files/home/.config/nvim/init.vim
 ~/.config/nvim/lua/init.lua:./files/home/.config/nvim/lua/init.lua
 ~/.ssh/config:./files/home/.ssh/config
-~/.config/redshift.conf:./files/home/.config/redshift.conf
+~/.config/hypr/hypridle.conf:./files/home/.config/hypr/hypridle.conf
+~/.config/hypr/hyprland.conf:./files/home/.config/hypr/hyprland.conf
+~/.config/hypr/hyprpaper.conf:./files/home/.config/hypr/hyprpaper.conf
+~/.config/waybar/config:./files/home/.config/waybar/config
+~/.config/waybar/style.css:./files/home/.config/waybar/style.css
+~/.config/wofi/config:./files/home/.config/wofi/config
+~/.config/wofi/style.css:./files/home/.config/wofi/style.css
+/etc/hypr/hyprlock.conf:./files/etc/hypr/hyprlock.conf
 /usr/local/share/fonts/Iosevka_Term_Extended_Nerd_Font.ttf:./files/usr/local/share/fonts/Iosevka_Term_Extended_Nerd_Font.ttf:0
 /usr/local/share/fonts/Roboto-Regular.ttf:./files/usr/local/share/fonts/Roboto-Regular.ttf:0
