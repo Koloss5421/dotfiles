@@ -3,8 +3,11 @@
 ~/.config/nvim/init.vim:./files/home/.config/nvim/init.vim
 ~/.config/nvim/lua/init.lua:./files/home/.config/nvim/lua/init.lua
 ~/.ssh/config:./files/home/.ssh/config
+~/.config/hypr/check_laptop_lid.sh:./files/home/.config/hypr/check_laptop_lid.sh
+~/.config/hypr/setup_hyprland.sh:./files/home/.config/hypr/setup_hyprland.sh
 ~/.config/hypr/hypridle.conf:./files/home/.config/hypr/hypridle.conf
 ~/.config/hypr/hyprland.conf:./files/home/.config/hypr/hyprland.conf
+~/.config/hypr/hyprland.conf.template:./files/home/.config/hypr/hyprland.conf.template
 ~/.config/hypr/hyprpaper.conf:./files/home/.config/hypr/hyprpaper.conf
 ~/.config/waybar/config:./files/home/.config/waybar/config
 ~/.config/waybar/style.css:./files/home/.config/waybar/style.css

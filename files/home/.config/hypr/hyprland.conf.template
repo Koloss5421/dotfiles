@@ -29,11 +29,11 @@ debug {
 #exec-once = ~/.config/hypr/check_monitors.sh
 #monitor = , preferred, 0x0, 1
 monitor = eDP-1, preferred, 2560x1440, 1.175
-monitor = DP-2, 2560x1440@75.0, 0x0, auto
-monitor = DP-6, 2560x1440@75.0, 2560x0, auto
+monitor = {{ LEFT_MONITOR }}, 2560x1440@60.0, 0x0, auto
+monitor = {{ RIGHT_MONITOR }}, 2560x1440@60.0, 2560x0, auto
 
-workspace = 1, monitor:DP-6
-workspace = 2, monitor:DP-2
+workspace = 1, monitor:{{ RIGHT_MONITOR }}
+workspace = 2, monitor:{{ LEFT_MONITOR }}
 workspace = 3, monitor:eDP-1
 
 ###################
@@ -65,7 +65,7 @@ exec-once = hyprpaper
 exec-once = waybar
 ## This will lock the screen immediately after login
 exec-once = $lockScreen
-exec-once = sleep 10 && syncthingtray
+exec-once = pidof waybar && syncthingtray
 
 #############################
 ### ENVIRONMENT VARIABLES ###
