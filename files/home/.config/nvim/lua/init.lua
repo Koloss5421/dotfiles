@@ -10,14 +10,14 @@ local feedkey = function(key, mode)
 end
 
 
-local lspconfig = require('lspconfig')
-local lsp_defaults = lspconfig.util.default_config
+--local lspconfig = vim.lsp.config()
+--local lsp_defaults = lspconfig.util.default_config
 
-lsp_defaults.capabilities = vim.tbl_deep_extend(
-  'force',
-  lsp_defaults.capabilities,
-  require('cmp_nvim_lsp').default_capabilities()
-)
+--lsp_defaults.capabilities = vim.tbl_deep_extend(
+--  'force',
+--  lsp_defaults.capabilities,
+--  require('cmp_nvim_lsp').default_capabilities()
+--)
 -- Set up nvim-cmp.
 local cmp = require('cmp')
 
@@ -77,20 +77,21 @@ cmp.setup({
 -- lsp servers
   local capabilities = require('cmp_nvim_lsp').default_capabilities()
   -- Replace <YOUR_LSP_SERVER> with ea/ch lsp server you've enabled.
-    lspconfig.pylsp.setup {
+    vim.lsp.config.pylsp = {
     capabilities = capabilities
   }
 
-  lspconfig.clangd.setup {
+  vim.lsp.config.clangd = {
       capabilities = capabilities
   }
 
-  lspconfig.asm_lsp.setup {
+  vim.lsp.config.asm_lsp = {
       cmd = {"asm-lsp"},
       filetypes = {"asm", "nasm", "vmasm"},
       --capabilities = default_capabilities
   }
-  lspconfig.tsserver.setup{}
+  --lspconfig.tsserver.setup{}
+  vim.lsp.config.ts_ls = {}
 
   
   local win = require('lspconfig.ui.windows')

@@ -73,13 +73,14 @@ if ! shopt -oq posix; then
   fi
 fi
 
+_split_longopt() { _comp__split_longopt "$@"; }
 
 ## Bashrc Custom:
 reset_smartcard () {
     echo "[+] Resetting Ssh-Agent..."
     ssh-add -D
     echo "[+] Adding pkcs to agent..."
-    success="$(ssh-add -s /usr/lib/x86_64-linux-gnu/opensc-pkcs11.so 2>&1)"
+    success="$(ssh-add -s /usr/lib/opensc-pkcs11.so 2>&1)"
     error=$(echo "$success" | grep "Could not add card")
     if [[ ! -z "$error" ]]; then
         echo "[!] Killing ssh-agents..."
@@ -90,7 +91,7 @@ reset_smartcard () {
         echo "[+] Starting SSH Agent..."
         eval `ssh-agent -s`
         echo "[+] Adding pkcs to agent..."
-        ssh-add -s /usr/lib/x86_64-linux-gnu/opensc-pkcs11.so
+        ssh-add -s /usr/lib/opensc-pkcs11.so
     fi
 }
 
@@ -98,20 +99,11 @@ pysource () {
 	source /opt/projects/hacking/venv/bin/activate
 }
 
-reset_xfce_cursor () {
-    xfconf-query --channel xsettings --property /Gtk/CursorThemeSize --set 16
-}
-
-update-discord () {
-    installed_version=$(dpkg -l discord | grep amd64 | sed -E "s/\s{2,}/,/g" | cut -d ',' -f 3)
-    live_version=$(curl "https://discord.com/api/download?platform=linux&format=deb" -si | grep "location:" | rev | cut -d '/' -f 2 | rev)
-    if [[ "$installed_version" != "$live_version" ]]; then
-        echo "[+] Updating Discord from $installed_version -> $live_version..."
-        curl -L "https://discord.com/api/download?platform=linux&format=deb" --output /tmp/discord_update.deb
-        sudo dpkg -i /tmp/discord_update.deb
-    else
-        echo "[*] Discord is already at $installed_version (live: $live_version)."
-    fi
+winswitch () {
+	WINDOWS_ENTRY=$(sudo grep menuentry /boot/grub/grub.cfg  | grep --line-number Windows)
+	MENU_NUMBER=$(( `echo $WINDOWS_ENTRY | sed -e "s/:.*//"` - 1 ))
+	sudo grub-reboot $MENU_NUMBER
+	sudo reboot
 }
 
 ## Paths
