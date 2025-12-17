@@ -11,5 +11,6 @@
 ~/.ssh/config:./files/home/.ssh/config
 ~/.config/kdeglobals:./files/home/.config/kdeglobals
 ~/.config/kwinrc:./files/home/.config/kwinrc
+/opt/nvim-helper.sh:./files/opt/nvim-helper.sh
 /usr/local/share/fonts/Iosevka_Term_Extended_Nerd_Font.ttf:./files/usr/local/share/fonts/Iosevka_Term_Extended_Nerd_Font.ttf
 /usr/local/share/fonts/Roboto-Regular.ttf:./files/usr/local/share/fonts/Roboto-Regular.ttf
