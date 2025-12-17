@@ -2,6 +2,12 @@
 ~/.config/starship.toml:./files/home/.config/starship.toml
 ~/.config/nvim/init.vim:./files/home/.config/nvim/init.vim
 ~/.config/nvim/lua/init.lua:./files/home/.config/nvim/lua/init.lua
+~/.config/nvim/lua/cmp_config.lua:./files/home/.config/nvim/lua/cmp_config.lua
+~/.config/nvim/lua/keybinds.lua:./files/home/.config/nvim/lua/keybinds.lua
+~/.config/nvim/lua/lsp_config.lua:./files/home/.config/nvim/lua/lsp_config.lua
+~/.config/nvim/lua/snip_config.lua:./files/home/.config/nvim/lua/snip_config.lua
+~/.config/nvim/lua/theme.lua:./files/home/.config/nvim/lua/theme.lua
+~/.config/nvim/lua/ts_config.luua:./files/home/.config/nvim/lua/ts_config.lua
 ~/.ssh/config:./files/home/.ssh/config
 ~/.config/kdeglobals:./files/home/.config/kdeglobals
 ~/.config/kwinrc:./files/home/.config/kwinrc
