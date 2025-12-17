@@ -121,6 +121,7 @@ export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
 export LESS=' -R '
 
 ## Alias
+alias nvim=/opt/nvim-helper.sh
 alias rsc=reset_smartcard
 alias vim=nvim
 alias ll="ls -lha"

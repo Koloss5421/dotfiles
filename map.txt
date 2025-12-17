@@ -7,7 +7,7 @@
 ~/.config/nvim/lua/lsp_config.lua:./files/home/.config/nvim/lua/lsp_config.lua
 ~/.config/nvim/lua/snip_config.lua:./files/home/.config/nvim/lua/snip_config.lua
 ~/.config/nvim/lua/theme.lua:./files/home/.config/nvim/lua/theme.lua
-~/.config/nvim/lua/ts_config.luua:./files/home/.config/nvim/lua/ts_config.lua
+~/.config/nvim/lua/ts_config.lua:./files/home/.config/nvim/lua/ts_config.lua
 ~/.ssh/config:./files/home/.ssh/config
 ~/.config/kdeglobals:./files/home/.config/kdeglobals
 ~/.config/kwinrc:./files/home/.config/kwinrc
