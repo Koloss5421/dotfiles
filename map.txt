@@ -1,4 +1,7 @@
 ~/.bashrc:./files/.bashrc
+~/.config/ghostty/config:./files/home/.config/ghostty/config
+~/.config/ghostty/shaders/cursor_smear.glsl:./files/home/.config/ghostty/shaders/cursor_smear.glsl
+~/.config/ghostty/shaders/cursor_smear_gradient.glsl:./files/home/.config/ghostty/shaders/cursor_smear_gradient.glsl
 ~/.config/starship.toml:./files/home/.config/starship.toml
 ~/.config/nvim/init.vim:./files/home/.config/nvim/init.vim
 ~/.config/nvim/lua/init.lua:./files/home/.config/nvim/lua/init.lua

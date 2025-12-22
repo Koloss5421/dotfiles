@@ -13,6 +13,7 @@ BorderActivate=9
 [NightColor]
 Active=true
 Mode=Constant
+NightTemperature=4000
 
 [Tiling]
 padding=4

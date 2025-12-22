@@ -29,6 +29,7 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'saadparwaiz1/cmp_luasnip'
 
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+" Plug 'sphamba/smear-cursor.nvim'
 call plug#end()
 
 lua require('init')
