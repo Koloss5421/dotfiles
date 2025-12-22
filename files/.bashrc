@@ -79,6 +79,9 @@ _split_longopt() { _comp__split_longopt "$@"; }
 reset_smartcard () {
     echo "[+] Resetting Ssh-Agent..."
     ssh-add -D
+    if [[ ! -z $? ]]; then
+        eval `ssh-agent -s`
+    fi
     echo "[+] Adding pkcs to agent..."
     success="$(ssh-add -s /usr/lib/opensc-pkcs11.so 2>&1)"
     error=$(echo "$success" | grep "Could not add card")
