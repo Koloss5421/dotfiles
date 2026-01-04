@@ -134,5 +134,3 @@ alias calc="bc -li"
 
 ## Exec Starship
 eval "$(starship init bash)"
-
-source '/home/koloss/.bash_completions/comfy.sh'

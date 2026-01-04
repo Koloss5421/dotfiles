@@ -1,0 +1,10 @@
+[Libinput][1133][16495][Logitech MX Ergo]
+PointerAcceleration=0.200
+PointerAccelerationProfile=1
+
+[Libinput][13364][53288][Keychron Keychron Ultra-Link 8K]
+PointerAcceleration=0.200
+PointerAccelerationProfile=1
+
+[Mouse]
+X11LibInputXAccelProfileFlat=true

@@ -51,5 +51,6 @@ font-size = 10
 background-opacity = 0.7
 background-blur-radius = 1
 theme = 3024 Night
-
+keybind = performable:ctrl+shift+c=copy_to_clipboard
+keybind = performable:ctrl+shift+v=paste_from_clipboard
 custom-shader = shaders/cursor_smear.glsl

@@ -11,6 +11,9 @@ print_help() {
 backup() {
 	cat $MAP_FILE | while read line
 	do
+        if [[ "$line" == "#"* ]]; then
+            continue
+        fi
 		dont_backup=$(echo $line | cut -d ':' -f 3)
 		original_file=$(eval echo $(echo $line | cut -d ':' -f 1))
 		backup_location=$(eval echo $(echo $line | cut -d ':' -f 2))
@@ -28,6 +31,9 @@ backup() {
 restore() {
 	cat $MAP_FILE | while read line
 	do
+        if [[ "$line" == "#"* ]]; then
+            continue
+        fi
 		original_file=$(eval echo $(echo $line | cut -d ':' -f 1))
 		backup_location=$(eval echo $(echo $line | cut -d ':' -f 2))
 

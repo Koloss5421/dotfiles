@@ -1,8 +1,11 @@
+# Bash
 ~/.bashrc:./files/.bashrc
+# Terminal
 ~/.config/ghostty/config:./files/home/.config/ghostty/config
 ~/.config/ghostty/shaders/cursor_smear.glsl:./files/home/.config/ghostty/shaders/cursor_smear.glsl
 ~/.config/ghostty/shaders/cursor_smear_gradient.glsl:./files/home/.config/ghostty/shaders/cursor_smear_gradient.glsl
 ~/.config/starship.toml:./files/home/.config/starship.toml
+# Neovim
 ~/.config/nvim/init.vim:./files/home/.config/nvim/init.vim
 ~/.config/nvim/lua/init.lua:./files/home/.config/nvim/lua/init.lua
 ~/.config/nvim/lua/cmp_config.lua:./files/home/.config/nvim/lua/cmp_config.lua
@@ -11,9 +14,15 @@
 ~/.config/nvim/lua/snip_config.lua:./files/home/.config/nvim/lua/snip_config.lua
 ~/.config/nvim/lua/theme.lua:./files/home/.config/nvim/lua/theme.lua
 ~/.config/nvim/lua/ts_config.lua:./files/home/.config/nvim/lua/ts_config.lua
-~/.ssh/config:./files/home/.ssh/config
-~/.config/kdeglobals:./files/home/.config/kdeglobals
-~/.config/kwinrc:./files/home/.config/kwinrc
 /opt/nvim-helper.sh:./files/opt/nvim-helper.sh
+# SSH 
+~/.ssh/config:./files/home/.ssh/config
+# DE
+~/.config/kdeglobals:./files/home/.config/kdeglobals
+~/.config/kglobalshortcutsrc:./files/home/.config/kglobalshortcutsrc
+~/.config/kwinrc:./files/home/.config/kwinrc
+~/.config/kcminputrc:./files/home/.config/kcminputrc
+~/.config/ksmserverrc:./files/home/.config/ksmserverrc
+# System
 /usr/local/share/fonts/Iosevka_Term_Extended_Nerd_Font.ttf:./files/usr/local/share/fonts/Iosevka_Term_Extended_Nerd_Font.ttf
 /usr/local/share/fonts/Roboto-Regular.ttf:./files/usr/local/share/fonts/Roboto-Regular.ttf
