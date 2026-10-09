@@ -1,5 +1,5 @@
 [General]
-loginMode=restoreSavedSession
+loginMode=emptySession
 
 [LegacySession: saved at previous logout]
 count=0

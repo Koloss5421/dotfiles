@@ -1,9 +1,7 @@
 # Bash
 ~/.bashrc:./files/.bashrc
 # Terminal
-~/.config/ghostty/config:./files/home/.config/ghostty/config
-~/.config/ghostty/shaders/cursor_smear.glsl:./files/home/.config/ghostty/shaders/cursor_smear.glsl
-~/.config/ghostty/shaders/cursor_smear_gradient.glsl:./files/home/.config/ghostty/shaders/cursor_smear_gradient.glsl
+~/.config/kitty/kitty.conf:./files/home/.config/kitty/kitty.conf
 ~/.config/starship.toml:./files/home/.config/starship.toml
 # Neovim
 ~/.config/nvim/init.vim:./files/home/.config/nvim/init.vim

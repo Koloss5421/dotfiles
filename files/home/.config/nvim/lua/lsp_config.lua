@@ -21,7 +21,7 @@ vim.lsp.config.clangd = {
 vim.lsp.config.asm_lsp = {
     cmd = {"asm-lsp"},
     filetypes = {"asm", "nasm", "vmasm"},
-    --capabilities = default_capabilities
+    capabilities = capabilities
 }
 --lspconfig.tsserver.setup{}
 vim.lsp.config.ts_ls = {}
